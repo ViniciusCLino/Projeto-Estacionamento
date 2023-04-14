@@ -30,4 +30,3 @@ Olá avaliador !
 	- No terminal acessar a pasta do projeto e executar o comando "git pull" em seguida
 	- Com o terminal na raiz do projeto, executar o comando "chmod +x *.sh"
 	- Para iniciar o docker do projeto executar o comando "./start.sh" na pasta git
-	- Para iniciar o frontend executar o comando "ng s"
