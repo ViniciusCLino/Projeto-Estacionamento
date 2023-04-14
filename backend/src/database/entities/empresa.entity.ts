@@ -12,12 +12,6 @@ export class EmpresaEntity {
   cnpj: string;
   
   @Column()
-  estado: string;
-
-  @Column()
-  cidade: string;
-
-  @Column()
   rua: string;
 
   @Column()
