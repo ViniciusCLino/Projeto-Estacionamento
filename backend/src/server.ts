@@ -1,6 +1,5 @@
 import express, {Request, Response} from 'express';
 import cors from 'cors';
-import { PostController } from './controller/post.controller'; // import the post controller
 import { createConnection } from "typeorm";
 import { EmpresaController } from './controller/empresa.controller';
 import { CarroController } from './controller/carro.controller';
@@ -8,7 +7,6 @@ import { CarroController } from './controller/carro.controller';
 class Server {
   private empresaController: EmpresaController;
   private carroController: CarroController;
-  private postController: PostController;
   private app: express.Application;
 
   constructor(){
@@ -47,7 +45,6 @@ class Server {
       name: "estacionamento"
     });
 
-    this.postController = new PostController();
     this.empresaController = new EmpresaController();
     this.carroController = new CarroController();
 
@@ -55,7 +52,6 @@ class Server {
       res.send( "Hello world!" );
     });
 
-    this.app.use(`/api/posts/`,this.postController.router); 
     this.app.use(`/api/empresa/`,this.empresaController.router);
     this.app.use(`/api/carro/`,this.carroController.router);
   }
