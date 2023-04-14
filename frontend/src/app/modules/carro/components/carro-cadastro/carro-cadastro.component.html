@@ -1,0 +1,74 @@
+<div class="flex flex-col w-full filter-article">
+    <form [formGroup]="form">
+
+        <div class="w-full flex flex-wrap flex-row justify-between mb-4">
+            <div class="text-2xl font-semibold leading-tight mb-8">Dados de cadastro</div>
+
+            <button mat-icon-button aria-label="Limpar">
+                <mat-icon>delete_sweep</mat-icon>
+            </button>
+        </div>
+    
+        <div class="flex flex-row w-full">
+            <mat-form-field appearance="fill" class="basis-1/4 mr-8">
+                <mat-label>Marca</mat-label>
+                <input matInput formControlName="marca">
+                <!-- <mat-error *ngIf="form.get('marca').hasError('required')">
+                    Marca do carro é obrigatório
+                </mat-error> -->
+            </mat-form-field>
+        </div>
+
+        <div class="flex flex-row w-full">
+            <mat-form-field appearance="fill" class="basis-1/4 mr-8">
+                <mat-label>Modelo</mat-label>
+                <input matInput formControlName="modelo">
+                <!-- <mat-error *ngIf="form.get('modelo').hasError('required')">
+                    Marca do carro é obrigatório
+                </mat-error> -->
+            </mat-form-field>
+        </div>
+
+        <div class="flex flex-row w-full">
+            <mat-form-field appearance="fill" class="basis-1/4 mr-8">
+            <mat-label>Cor</mat-label>
+            <mat-select [compareWith]="selectedOption" formControlName="cor">
+                <mat-option value="">:: SELECIONAR ::</mat-option>
+                    <mat-option *ngFor="let cor of listaCores" [value]="cor">
+                        {{cor}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="flex flex-row w-full">
+            <mat-form-field appearance="fill" class="basis-1/4 mr-8">
+                <mat-label>Placa</mat-label>
+                <input matInput formControlName="placa">
+                <!-- <mat-error *ngIf="form.get('placa').hasError('required')">
+                    Placa do carro é obrigatório
+                </mat-error> -->
+            </mat-form-field>
+        </div>
+
+        <div class="flex flex-row w-full">
+            <mat-form-field appearance="fill" class="basis-1/4 mr-8">
+                <mat-label>Tipo</mat-label>
+                <input matInput formControlName="tipo">
+                <!-- <mat-error *ngIf="form.get('tipo').hasError('required')">
+                    Tipo do carro é obrigatório
+                </mat-error> -->
+            </mat-form-field>
+        </div>
+
+        <div class="card-footer flex items-center justify-center mb-4 border-t" appearance="outline">
+            <button class="mt-4 mr-8" type="button" (click)="salvar()" mat-flat-button color="accent">
+                <mat-icon>save</mat-icon> Salvar
+            </button>
+            <button class="mt-4" type="button" (click)="voltar()" mat-flat-button color="accent">
+                <mat-icon>reply_all</mat-icon> Voltar
+            </button>
+        </div>
+                
+    </form>
+</div>

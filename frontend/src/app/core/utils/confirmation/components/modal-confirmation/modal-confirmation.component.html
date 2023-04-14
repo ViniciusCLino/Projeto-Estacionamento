@@ -1,0 +1,12 @@
+<div id="modal-confirmation" class="flex-col flex p-6">
+    <div class="flex-col flex">
+        <h1>{{obj.titulo}}</h1>
+    </div>
+    <div mat-dialog-content class="w-full flex flex-wrap flex-row">
+        <h3>{{obj.mensagem}}</h3>
+    </div>
+    <div mat-dialog-actions class="flex items-center justify-center">
+        <button mat-raised-button class="mr-8 warn-600"  (click)="fechar()">Não</button>
+        <button mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial>Sim</button>
+    </div>
+</div>
