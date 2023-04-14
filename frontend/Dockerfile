@@ -1,11 +1,11 @@
-FROM node:16
+FROM node:14-alpine
 
-WORKDIR /usr/src/app/app-ui
+WORKDIR /home/node/app
+COPY package.json ./
+RUN  npm install -g @angular/cli && npm install
 
-COPY package*.json ./
-
-RUN npm install -g @angular/cli @angular-devkit/build-angular && npm install
+COPY . .
 
 EXPOSE 4200
-
-CMD ["npm", "start"]
+   
+CMD ["ng", "s"]  
