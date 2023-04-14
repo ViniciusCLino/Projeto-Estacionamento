@@ -32,10 +32,14 @@ import { CarroDetalheResolver } from './shareds/resolvers/carro.resolvers';
 
 @NgModule({
     declarations: [
-        CarroCadastroComponent,
-        CarroGridComponent,
+
+        //PAGES
         CarroGridPageComponent,
         CarroCadastroPageComponent,
+
+        //COMPONENT
+        CarroCadastroComponent,
+        CarroGridComponent,
     ],
     imports: [
         CommonModule,

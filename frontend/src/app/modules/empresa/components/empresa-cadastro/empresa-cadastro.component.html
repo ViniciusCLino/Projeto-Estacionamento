@@ -9,6 +9,9 @@
             <mat-form-field appearance="fill" class="basis-1/4 mr-8">
                 <mat-label>Nome da empresa</mat-label>
                 <input matInput formControlName="nome">
+                <!-- <mat-error *ngIf="form.get('nome').hasError('required')">
+                    Nome da empresa é obrigatório
+                </mat-error> -->
             </mat-form-field>
         </div>
 
@@ -16,6 +19,9 @@
             <mat-form-field appearance="fill" class="basis-1/4 mr-8">
                 <mat-label>CNPJ</mat-label>
                 <input matInput formControlName="cnpj">
+                <!-- <mat-error *ngIf="form.get('cnpj').hasError('required')">
+                    CNPJ da empresa é obrigatório
+                </mat-error> -->
             </mat-form-field>
         </div>
 
@@ -23,6 +29,9 @@
             <mat-form-field appearance="fill" class="basis-1/4 mr-8">
                 <mat-label>Quantidade de vagas para motos</mat-label>
                 <input matInput formControlName="quantidadeVagasMotos">
+                <!-- <mat-error *ngIf="form.get('quantidadeVagasMotos').hasError('required')">
+                    Quantidade de vagas para motos é obrigatório
+                </mat-error> -->
             </mat-form-field>
         </div>
 
@@ -30,6 +39,9 @@
             <mat-form-field appearance="fill" class="basis-1/4 mr-8">
                 <mat-label>Quantidade de vagas para carros</mat-label>
                 <input matInput formControlName="quantidadeVagasCarros">
+                <!-- <mat-error *ngIf="form.get('quantidadeVagasCarros').hasError('required')">
+                    Quantidade de vagas para carros é obrigatório
+                </mat-error> -->
             </mat-form-field>
         </div>
 
@@ -41,6 +53,9 @@
             <mat-form-field appearance="fill" class="basis-1/4 mr-8">
                 <mat-label>Estado, cidade e rua</mat-label>
                 <input matInput formControlName="rua">
+                <!-- <mat-error *ngIf="form.get('rua').hasError('required')">
+                    Rua é obrigatório
+                </mat-error> -->
             </mat-form-field>
         </div>
 
@@ -48,6 +63,9 @@
             <mat-form-field appearance="fill" class="basis-1/4 mr-8">
                 <mat-label>Número</mat-label>
                 <input matInput formControlName="numero">
+                <!-- <mat-error *ngIf="form.get('numero').hasError('required')">
+                    Número da empresa é obrigatório
+                </mat-error> -->
             </mat-form-field>
         </div>
 
@@ -55,6 +73,9 @@
             <mat-form-field appearance="fill" class="basis-1/4 mr-8">
                 <mat-label>Complemento</mat-label>
                 <input matInput formControlName="complemento">
+                <!-- <mat-error *ngIf="form.get('complemento').hasError('required')">
+                    Complemento da empresa é obrigatório
+                </mat-error> -->
             </mat-form-field>
         </div>
 
@@ -62,6 +83,9 @@
             <mat-form-field appearance="fill" class="basis-1/4 mr-8">
                 <mat-label>Telefone</mat-label>
                 <input matInput formControlName="telefone" mask="(00)99999-9999">
+                <!-- <mat-error *ngIf="form.get('telefone').hasError('required')">
+                    Telefone da empresa é obrigatório
+                </mat-error> -->
             </mat-form-field>
         </div>
 
