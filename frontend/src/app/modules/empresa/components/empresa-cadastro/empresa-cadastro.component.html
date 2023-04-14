@@ -1,12 +1,8 @@
 <div class="flex flex-col w-full filter-article">
     <form [formGroup]="form">
 
-        <div class="w-full flex flex-wrap flex-row justify-between mb-4">
-            <div class="text-2xl font-semibold leading-tight mb-8">Dados de cadastro</div>
-
-            <button mat-icon-button aria-label="Limpar">
-                <mat-icon>delete_sweep</mat-icon>
-            </button>
+        <div class="flex flex-row w-full p-4">
+            <mat-label class="text-2xl font-semibold leading-tight border-b">Dados da empresa</mat-label>
         </div>
     
         <div class="flex flex-row w-full">
@@ -30,12 +26,32 @@
         </div>
 
         <div class="flex flex-row w-full">
-                <mat-label class="text-1xl font-semibold leading-tight border-b">Endereço</mat-label>
+            <mat-form-field appearance="fill" class="basis-1/4 mr-8">
+                <mat-label>Quantidade de vagas para motos</mat-label>
+                <input matInput formControlName="quantidadeVagasMotos">
+                <!-- <mat-error *ngIf="form.get('quantidadeVagasMotos').hasError('required')">
+                    Quantidade de vagas para motos é obrigatório
+                </mat-error> -->
+            </mat-form-field>
         </div>
 
         <div class="flex flex-row w-full">
             <mat-form-field appearance="fill" class="basis-1/4 mr-8">
-                <mat-label>Rua</mat-label>
+                <mat-label>Quantidade de vagas para carros</mat-label>
+                <input matInput formControlName="quantidadeVagasCarros">
+                <!-- <mat-error *ngIf="form.get('quantidadeVagasCarros').hasError('required')">
+                    Quantidade de vagas para carros é obrigatório
+                </mat-error> -->
+            </mat-form-field>
+        </div>
+
+        <div class="flex flex-row w-full p-4">
+            <mat-label class="text-2xl font-semibold leading-tight border-b">Endereço</mat-label>
+        </div>
+
+        <div class="flex flex-row w-full">
+            <mat-form-field appearance="fill" class="basis-1/4 mr-8">
+                <mat-label>Estado, cidade e rua</mat-label>
                 <input matInput formControlName="rua">
                 <!-- <mat-error *ngIf="form.get('rua').hasError('required')">
                     Rua é obrigatório
@@ -66,29 +82,9 @@
         <div class="flex flex-row w-full">
             <mat-form-field appearance="fill" class="basis-1/4 mr-8">
                 <mat-label>Telefone</mat-label>
-                <input matInput formControlName="telefone">
+                <input matInput formControlName="telefone" mask="(00)99999-9999">
                 <!-- <mat-error *ngIf="form.get('telefone').hasError('required')">
                     Telefone da empresa é obrigatório
-                </mat-error> -->
-            </mat-form-field>
-        </div>
-
-        <div class="flex flex-row w-full">
-            <mat-form-field appearance="fill" class="basis-1/4 mr-8">
-                <mat-label>Quantidade de vagas para motos</mat-label>
-                <input matInput formControlName="quantidadeVagasMotos">
-                <!-- <mat-error *ngIf="form.get('quantidadeVagasMotos').hasError('required')">
-                    Quantidade de vagas para motos é obrigatório
-                </mat-error> -->
-            </mat-form-field>
-        </div>
-
-        <div class="flex flex-row w-full">
-            <mat-form-field appearance="fill" class="basis-1/4 mr-8">
-                <mat-label>Quantidade de vagas para carros</mat-label>
-                <input matInput formControlName="quantidadeVagasCarros">
-                <!-- <mat-error *ngIf="form.get('quantidadeVagasCarros').hasError('required')">
-                    Quantidade de vagas para carros é obrigatório
                 </mat-error> -->
             </mat-form-field>
         </div>

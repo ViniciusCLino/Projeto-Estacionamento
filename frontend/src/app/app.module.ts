@@ -10,8 +10,8 @@ import { EmpresaModule } from './modules/empresa/empresa.module';
 import { CarroModule } from './modules/carro/carro.module';
 import { carroRoutes } from './modules/carro/carro.routing';
 import { empresaRoutes } from './modules/empresa/empresa.routing';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatListModule} from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 
@@ -28,9 +28,13 @@ const routerConfig: ExtraOptions = {
   ],
   imports: [
     BrowserModule,
+
+    //ROUTING
     RouterModule.forRoot(appRoutes, routerConfig),
     RouterModule.forChild(carroRoutes),
     RouterModule.forChild(empresaRoutes),
+
+    //SHAREDS
     SharedModule,
     CoreModule,
     BrowserAnimationsModule,
